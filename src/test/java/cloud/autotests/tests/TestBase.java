@@ -17,13 +17,12 @@ import org.junit.jupiter.api.extension.ExtendWith;
 @ExtendWith({AllureJunit5.class})
 public class TestBase {
 
-    String baseUrl = "https://learnenglish.britishcouncil.org/";
-
     @BeforeAll
     static void setUp() {
+        Configuration.baseUrl = "https://learnenglish.britishcouncil.org/";
+        Configuration.remote = "https://user1:1234@selenoid.autotests.cloud/wd/hub";
         SelenideLogger.addListener("AllureSelenide", new AllureSelenide());
         DriverSettings.configure();
-        Configuration.remote = "https://user1:1234@selenoid.autotests.cloud/";
     }
 
     @AfterEach
