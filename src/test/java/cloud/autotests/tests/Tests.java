@@ -18,7 +18,7 @@ public class Tests extends TestBase {
     @Test
     @DisplayName("Search filter test")
     void searchTest() {
-        step("Open home page", () -> open());
+        step("Open home page", () -> open(""));
 
         step("Open search filter", () -> $("#edit-keys--2").click());
 
@@ -32,7 +32,7 @@ public class Tests extends TestBase {
     @Test
     @DisplayName("Open Log in page test")
     void openRegisterPageTest() {
-        step("Open home page", () -> open());
+        step("Open home page", () -> open(""));
 
         step("Open Log in page", () -> $("a[data-drupal-link-system-path='user/login']").click());
 
@@ -43,7 +43,7 @@ public class Tests extends TestBase {
     @Test
     @DisplayName("Open Register page test")
     void openLoginPageTest() {
-        step("Open home page", () -> open());
+        step("Open home page", () -> open(""));
 
         step("Open Register page", () -> $("a[data-drupal-link-system-path='user/register']").click());
 
@@ -54,7 +54,7 @@ public class Tests extends TestBase {
     @Test
     @DisplayName("Open Contact us page test")
     void openContactUsPageTest() {
-        step("Open home page", () -> open());
+        step("Open home page", () -> open(""));
 
         step("Open Contact us page", () -> $("a[data-drupal-link-system-path='node/51']").scrollTo().click());
 
@@ -65,7 +65,7 @@ public class Tests extends TestBase {
     @Test
     @DisplayName("Open Grammar page test")
     void openGrammarPageTest() {
-        step("Open home page", () -> open());
+        step("Open home page", () -> open(""));
 
         step("Open Grammar page", () -> $("a[data-drupal-link-system-path='taxonomy/term/2383']").click());
 
